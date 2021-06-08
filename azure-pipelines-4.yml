@@ -1,0 +1,12 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: 'script-connection'
+    ScriptType: 'FilePath'
+    azurePowerShellVersion: 'LatestVersion'
